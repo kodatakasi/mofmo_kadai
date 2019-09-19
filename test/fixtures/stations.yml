@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route1: MyString
+  station1: MyString
+  walking1: 1
+  route2: MyString
+  station2: MyString
+  walking2: 1
+
+two:
+  route1: MyString
+  station1: MyString
+  walking1: 1
+  route2: MyString
+  station2: MyString
+  walking2: 1
