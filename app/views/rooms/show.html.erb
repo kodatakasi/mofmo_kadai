@@ -1,29 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>物件名</strong>
   <%= @room.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>賃料</strong>
   <%= @room.price %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>築年数</strong>
   <%= @room.age %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>住所</strong>
   <%= @room.address %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <strong>備考</strong>
   <%= @room.remarks %>
 </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<hr>
+
+<h3>最寄駅１</h3>
+
+<h3>最寄駅２</h3>
+
+<%= link_to '編集', edit_room_path(@room) %> |
+<%= link_to '戻る', rooms_path %>
