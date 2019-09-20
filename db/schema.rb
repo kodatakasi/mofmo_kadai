@@ -13,19 +13,19 @@
 ActiveRecord::Schema.define(version: 20190919072646) do
 
   create_table "rooms", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "price"
-    t.integer  "age"
-    t.text     "address"
+    t.string   "name",       null: false
+    t.integer  "price",      null: false
+    t.integer  "age",        null: false
+    t.text     "address",    null: false
     t.text     "remarks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "stations", force: :cascade do |t|
-    t.string   "route1"
-    t.string   "station1"
-    t.integer  "walking1"
+    t.string   "route1",     null: false
+    t.string   "station1",   null: false
+    t.integer  "walking1",   null: false
     t.string   "route2"
     t.string   "station2"
     t.integer  "walking2"
