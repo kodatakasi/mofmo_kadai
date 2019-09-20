@@ -29,7 +29,37 @@
 
 <h3>最寄駅１</h3>
 
+  <p>
+    <strong>路線名</strong>
+    <%= @room.station.route1 %>
+  </p>
+
+  <p>
+    <strong>駅名</strong>
+    <%= @room.station.station1 %>
+  </p>
+
+  <p>
+    <strong>徒歩分数</strong>
+    <%= @room.station.walking1 %>
+  </p>
+
 <h3>最寄駅２</h3>
+
+<p>
+    <strong>路線名</strong>
+    <%= @room.station.route2 %>
+  </p>
+
+  <p>
+    <strong>駅名</strong>
+    <%= @room.station.station2 %>
+  </p>
+
+  <p>
+    <strong>徒歩分数</strong>
+    <%= @room.station.walking2 %>
+  </p>
 
 <%= link_to '編集', edit_room_path(@room) %> |
 <%= link_to '戻る', rooms_path %>

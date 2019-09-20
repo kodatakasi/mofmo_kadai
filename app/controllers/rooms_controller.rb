@@ -5,7 +5,7 @@ class RoomsController < ApplicationController
   # GET /rooms.json
   def index
     @rooms = Room.all
-    @stations = Station.all
+    # @stations = Station.all
   end
 
   # GET /rooms/1
@@ -16,12 +16,12 @@ class RoomsController < ApplicationController
   # GET /rooms/new
   def new
     @room = Room.new
-    @station = Station.new
+    @room.build_station
   end
 
   # GET /rooms/1/edit
   def edit
-    @station = Station.find_by(:id)
+    
   end
 
   # POST /rooms
@@ -30,6 +30,7 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
 
     respond_to do |format|
+      # binding.pry
       if @room.save
         format.html { redirect_to @room, notice: '物件情報登録しました' }
         format.json { render :show, status: :created, location: @room }
@@ -72,10 +73,6 @@ class RoomsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def room_params
-    params.require(:room).permit(:name, :price, :age, :address, :remarks)
-  end
-
-  def station_params
-    params.require(:station).permit(:route1, :station1, :walking1, :route2, :station2, :walking2)
+    params.require(:room).permit(:name, :price, :age, :address, :remarks, station_attributes: [:route1, :station1, :walking1, :route2, :station2, :walking2])
   end
 end
