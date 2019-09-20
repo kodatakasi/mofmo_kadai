@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>物件名:</strong>
+  <%= @room.name %>
+</p>
+
+<p>
+  <strong>賃料:</strong>
+  <%= @room.price %>円
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @room.address %>
+</p>
+
+<p>
+  <strong>築年数</strong>
+  <%= @room.age %>年
+</p>
+
+<p>
+  <strong>備考</strong>
+  <%= @room.remarks %>
+</p>
+
+<hr>
+
+<% if @room.station.route1.blank? %>
+  <h3>最寄駅情報無し</h3>
+  <% else %>
+  <h3>最寄駅１</h3>
+
+    <p>
+      <strong>路線名</strong>
+      <%= @room.station.route1 %>
+    </p>
+
+    <p>
+      <strong>駅名</strong>
+      <%= @room.station.station1 %>
+    </p>
+
+    <p>
+      <strong>徒歩分数</strong>
+      <%= @room.station.walking1 %>
+    </p>
+    <% end %>
+  <% if @room.station.route2.blank? %>
+    <% else %>
+    <h3>最寄駅２</h3>
+
+    <p>
+      <strong>路線名</strong>
+      <%= @room.station.route2 %>
+    </p>
+
+    <p>
+      <strong>駅名</strong>
+      <%= @room.station.station2 %>
+    </p>
+
+    <p>
+      <strong>徒歩分数</strong>
+      <%= @room.station.walking2 %>
+    </p>
+  <% end %>
+
+<%= link_to '編集', edit_room_path(@room) %> |
+<%= link_to '戻る', rooms_path %>

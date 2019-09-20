@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      room: 物件
+      station: 最寄り駅情報
+    attributes:
+      station:
+        route1: 路線名
+        station1: 駅名
+        walking1: 徒歩分数
+        route2: 路線名
+        station2: 駅名
+        walking2: 徒歩分数
+      room:
+        name: 建物名
+        age: 築年数
+        price: 賃料
+        address: 住所
+        remarks: 備考
