@@ -36,11 +36,44 @@
     <%= f.text_area :remarks %>
   </div>
 
-  <hr>
+<hr>
+
   <h3>最寄り駅１</h3>
+
+  <div class="field">
+    <%= f.label :路線名 %>
+    <%= f.text_field :route1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :駅名 %>
+    <%= f.text_field :station1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :徒歩分数 %>
+    <%= f.text_field :walking1 %>分
+  </div>
   <h3>最寄り駅２</h3>
 
-  <div class="actions">
+  <div class="field">
+    <%= f.label :路線名 %>
+    <%= f.text_field :route2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :駅名 %>
+    <%= f.text_field :station2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :徒歩分数 %>
+    <%= f.text_field :walking2 %>分
+  </div>
+
+   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
